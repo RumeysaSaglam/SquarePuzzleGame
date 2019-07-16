@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: self
+Version: 2018.11.20
+Summary: @self decorator makes method return self (jQuery-like chaining)
+Home-page: https://github.com/looking-for-a-job/self.py
+License: UNKNOWN
+Keywords: self decorator
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: decorator
+Requires-Dist: public
+Requires-Dist: setuptools
+
+[![](https://img.shields.io/pypi/pyversions/self.svg?longCache=True)](https://pypi.org/pypi/self/)
+
+#### Install
+```bash
+$ [sudo] pip install self
+```
+
+#### Functions
+function|description
+-|-
+`self.self(method, self, *args, **kwargs)`|`@self` method decorator to return self object
+
+#### Examples
+```python
+>>> from self import self
+
+>>> class CLS:
+	@self
+	def method(self):
+		...
+
+	@self
+	def method2(self):
+		...
+
+>>> CLS().method().method2() # jQuery like chain
+```
+
+<p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
+
